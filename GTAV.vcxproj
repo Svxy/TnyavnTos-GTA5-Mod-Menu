@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{618A4253-6C78-433C-93B5-8C71F873FAD3}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>GTAV</RootNamespace>
+    <ProjectName>GTAV</ProjectName>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+    <UseOfMfc>Static</UseOfMfc>
+    <SpectreMitigation>false</SpectreMitigation>
+    <PreferredToolArchitecture>x64</PreferredToolArchitecture>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <OutDir>$(SolutionDir)Build\</OutDir>
+    <IntDir>$(SolutionDir)Build\Intermediate\</IntDir>
+    <LinkIncremental>false</LinkIncremental>
+    <TargetName>$(ProjectName)</TargetName>
+    <TargetExt>.dll</TargetExt>
+    <IncludePath>$(ProjectDir)\ThirdParty;$(IncludePath)</IncludePath>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>NDEBUG;_WINDOWS;_USRDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>
+      </AdditionalIncludeDirectories>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+      <BrowseInformation>false</BrowseInformation>
+      <WholeProgramOptimization>true</WholeProgramOptimization>
+      <LanguageStandard_C>stdc17</LanguageStandard_C>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <DebugInformationFormat>None</DebugInformationFormat>
+      <EnableFiberSafeOptimizations>true</EnableFiberSafeOptimizations>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalManifestDependencies>%(AdditionalManifestDependencies)</AdditionalManifestDependencies>
+      <IgnoreSpecificDefaultLibraries>
+      </IgnoreSpecificDefaultLibraries>
+    </Link>
+    <PostBuildEvent>
+      <Command>
+      </Command>
+    </PostBuildEvent>
+    <PostBuildEvent>
+      <Message>
+      </Message>
+    </PostBuildEvent>
+    <Bscmake>
+      <PreserveSbr>true</PreserveSbr>
+    </Bscmake>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClInclude Include="Header\Cheat Functions\CheatFunctions.h" />
+    <ClInclude Include="Header\Cheat Functions\Controls.h" />
+    <ClInclude Include="Header\Cheat Functions\FiberMain.h" />
+    <ClInclude Include="Header\Cheat Functions\Logger.h" />
+    <ClInclude Include="Header\Game Functions\CheatFeatures.h" />
+    <ClInclude Include="Header\Game Functions\GameArrays.h" />
+    <ClInclude Include="Header\Game Functions\GameFunctions.h" />
+    <ClInclude Include="Header\Game Hooking\CrossMapping.h" />
+    <ClInclude Include="Header\Game Hooking\Enums.h" />
+    <ClInclude Include="Header\Game Hooking\GameHooking.h" />
+    <ClInclude Include="Header\Game Hooking\Memory.h" />
+    <ClInclude Include="Header\Game Hooking\NativeCaller.h" />
+    <ClInclude Include="Header\Game Hooking\NativeInvoker.h" />
+    <ClInclude Include="Header\Game Hooking\Natives.h" />
+    <ClInclude Include="Header\Game Hooking\Offsets.h" />
+    <ClInclude Include="Header\Game Hooking\Types.h" />
+    <ClInclude Include="Header\GUI\GUI.h" />
+    <ClInclude Include="Header\GUI\Submenus.h" />
+    <ClInclude Include="Header\resource.h" />
+    <ClInclude Include="ThirdParty\MinHook\buffer.h" />
+    <ClInclude Include="ThirdParty\MinHook\hde\hde32.h" />
+    <ClInclude Include="ThirdParty\MinHook\hde\hde64.h" />
+    <ClInclude Include="ThirdParty\MinHook\hde\pstdint.h" />
+    <ClInclude Include="ThirdParty\MinHook\hde\table32.h" />
+    <ClInclude Include="ThirdParty\MinHook\hde\table64.h" />
+    <ClInclude Include="ThirdParty\MinHook\trampoline.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Source\Cheat Functions\CheatFunctions.cpp" />
+    <ClCompile Include="Source\Cheat Functions\Controls.cpp" />
+    <ClCompile Include="Source\Cheat Functions\Entry.cpp" />
+    <ClCompile Include="Source\Cheat Functions\FiberMain.cpp" />
+    <ClCompile Include="Source\Cheat Functions\Logger.cpp" />
+    <ClCompile Include="Source\Game Functions\CheatFeatures.cpp" />
+    <ClCompile Include="Source\Game Functions\GameArrays.cpp" />
+    <ClCompile Include="Source\Game Functions\GameFunctions.cpp" />
+    <ClCompile Include="Source\Game Hooking\CrossMapping.cpp" />
+    <ClCompile Include="Source\Game Hooking\GameHooking.cpp" />
+    <ClCompile Include="Source\Game Hooking\Memory.cpp" />
+    <ClCompile Include="Source\Game Hooking\NativeInvoker.cpp" />
+    <ClCompile Include="Source\GUI\GUI.cpp" />
+    <ClCompile Include="Source\GUI\Submenus.cpp" />
+    <ClCompile Include="Source\GUI\Submenus\About.cpp" />
+    <ClCompile Include="Source\GUI\Submenus\Aimbot.cpp" />
+    <ClCompile Include="Source\GUI\Submenus\AllPlayers.cpp" />
+    <ClCompile Include="Source\GUI\Submenus\AllPlayersExclusions.cpp" />
+    <ClCompile Include="Source\GUI\Submenus\Animations.cpp" />
+    <ClCompile Include="Source\GUI\Submenus\CustomTeleportLocations.cpp" />
+    <ClCompile Include="Source\GUI\Submenus\Disables.cpp" />
+    <ClCompile Include="Source\GUI\Submenus\ESP.cpp" />
+    <ClCompile Include="Source\GUI\Submenus\Globals.cpp" />
+    <ClCompile Include="Source\GUI\Submenus\HideElements.cpp" />
+    <ClCompile Include="Source\GUI\Submenus\HighAltitudeTeleportLocations.cpp" />
+    <ClCompile Include="Source\GUI\Submenus\Home.cpp" />
+    <ClCompile Include="Source\GUI\Submenus\HUD.cpp" />
+    <ClCompile Include="Source\GUI\Submenus\IPLLoader.cpp" />
+    <ClCompile Include="Source\GUI\Submenus\IPLTeleports.cpp" />
+    <ClCompile Include="Source\GUI\Submenus\LandmarkTeleportLocations.cpp" />
+    <ClCompile Include="Source\GUI\Submenus\Miscellaneous.cpp" />
+    <ClCompile Include="Source\GUI\Submenus\NearbyPeds.cpp" />
+    <ClCompile Include="Source\GUI\Submenus\NearbyVehicles.cpp" />
+    <ClCompile Include="Source\GUI\Submenus\ObjectSpawn.cpp" />
+    <ClCompile Include="Source\GUI\Submenus\ProtectionNetworkEvents.cpp" />
+    <ClCompile Include="Source\GUI\Submenus\ProtectionScriptEvents.cpp" />
+    <ClCompile Include="Source\GUI\Submenus\Session.cpp" />
+    <ClCompile Include="Source\GUI\Submenus\PedSpawn.cpp" />
+    <ClCompile Include="Source\GUI\Submenus\PlayerList.cpp" />
+    <ClCompile Include="Source\GUI\Submenus\Protection.cpp" />
+    <ClCompile Include="Source\GUI\Submenus\Radio.cpp" />
+    <ClCompile Include="Source\GUI\Submenus\Recovery.cpp" />
+    <ClCompile Include="Source\GUI\Submenus\RecoveryStatistics.cpp" />
+    <ClCompile Include="Source\GUI\Submenus\RecoverySubmenuWarning.cpp" />
+    <ClCompile Include="Source\GUI\Submenus\ReportStatistics.cpp" />
+    <ClCompile Include="Source\GUI\Submenus\SafehousesTeleportLocations.cpp" />
+    <ClCompile Include="Source\GUI\Submenus\SelectedPlayer.cpp" />
+    <ClCompile Include="Source\GUI\Submenus\SelectedPlayerApartmentTeleport.cpp" />
+    <ClCompile Include="Source\GUI\Submenus\SelectedPlayerAttachments.cpp" />
+    <ClCompile Include="Source\GUI\Submenus\SelectedPlayerFriendly.cpp" />
+    <ClCompile Include="Source\GUI\Submenus\SelectedPlayerRemote.cpp" />
+    <ClCompile Include="Source\GUI\Submenus\SelectedPlayerTeleport.cpp" />
+    <ClCompile Include="Source\GUI\Submenus\SelectedPlayerGriefing.cpp" />
+    <ClCompile Include="Source\GUI\Submenus\Self.cpp" />
+    <ClCompile Include="Source\GUI\Submenus\SelfModel.cpp" />
+    <ClCompile Include="Source\GUI\Submenus\SessionChat.cpp" />
+    <ClCompile Include="Source\GUI\Submenus\SessionStarter.cpp" />
+    <ClCompile Include="Source\GUI\Submenus\Settings.cpp" />
+    <ClCompile Include="Source\GUI\Submenus\ShootEntities.cpp" />
+    <ClCompile Include="Source\GUI\Submenus\Spawn.cpp" />
+    <ClCompile Include="Source\GUI\Submenus\SpawnedVehicles.cpp" />
+    <ClCompile Include="Source\GUI\Submenus\Teleport.cpp" />
+    <ClCompile Include="Source\GUI\Submenus\Television.cpp" />
+    <ClCompile Include="Source\GUI\Submenus\Theme.cpp" />
+    <ClCompile Include="Source\GUI\Submenus\ThemeFiles.cpp" />
+    <ClCompile Include="Source\GUI\Submenus\Time.cpp" />
+    <ClCompile Include="Source\GUI\Submenus\UnderwaterTeleportLocations.cpp" />
+    <ClCompile Include="Source\GUI\Submenus\Vehicle.cpp" />
+    <ClCompile Include="Source\GUI\Submenus\VehicleCustomizer.cpp" />
+    <ClCompile Include="Source\GUI\Submenus\VehicleCustomizerColor.cpp" />
+    <ClCompile Include="Source\GUI\Submenus\VehicleCustomizerNeon.cpp" />
+    <ClCompile Include="Source\GUI\Submenus\VehicleMultipliers.cpp" />
+    <ClCompile Include="Source\GUI\Submenus\VehicleSpawn.cpp" />
+    <ClCompile Include="Source\GUI\Submenus\VehicleSpawnSettings.cpp" />
+    <ClCompile Include="Source\GUI\Submenus\VehicleWeapons.cpp" />
+    <ClCompile Include="Source\GUI\Submenus\Vision.cpp" />
+    <ClCompile Include="Source\GUI\Submenus\Wardrobe.cpp" />
+    <ClCompile Include="Source\GUI\Submenus\Weapon.cpp" />
+    <ClCompile Include="Source\GUI\Submenus\WeaponAmmo.cpp" />
+    <ClCompile Include="Source\GUI\Submenus\Weapons.cpp" />
+    <ClCompile Include="Source\GUI\Submenus\WeaponVisuals.cpp" />
+    <ClCompile Include="Source\GUI\Submenus\Weather.cpp" />
+    <ClCompile Include="Source\GUI\Submenus\World.cpp" />
+    <ClCompile Include="ThirdParty\JsonCpp\json_reader.cpp" />
+    <ClCompile Include="ThirdParty\JsonCpp\json_value.cpp" />
+    <ClCompile Include="ThirdParty\JsonCpp\json_writer.cpp" />
+    <ClCompile Include="ThirdParty\MinHook\buffer.c" />
+    <ClCompile Include="ThirdParty\MinHook\hde\hde32.c" />
+    <ClCompile Include="ThirdParty\MinHook\hde\hde64.c" />
+    <ClCompile Include="ThirdParty\MinHook\hook.c" />
+    <ClCompile Include="ThirdParty\MinHook\trampoline.c" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="Source\GTAV.rc" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

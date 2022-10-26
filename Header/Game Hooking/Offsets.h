@@ -1,0 +1,30 @@
+#pragma once
+
+// Offsets
+#define OFFSET_PLAYER					0x08
+#define OFFSET_PLAYER_INFO				0x10C8
+#define OFFSET_PLAYER_INFO_EXTERNAL_IP	0x6C
+#define OFFSET_PLAYER_INFO_FRAMEFLAGS	0x219
+
+// Globals (These change with each major patch, see <Project Root>/Resources/TSE Globals folder for information on function location within game scripts)
+#define GLOBAL_PLAYER_PICTURE_INDEX		1660783
+#define GLOBAL_LEVEL_TO_RP				295824
+#define GLOBAL_DISABLE_MOBILE_PHONE		20249
+#define GLOBAL_SP_DESPAWN_BYPASS		4539659
+#define GLOBAL_TRANS_ERROR_SHOWN_1		4535606
+#define GLOBAL_TRANS_ERROR_SHOWN_2		4535607
+#define GLOBAL_TRANS_ERROR_SHOWN_3		4535608
+#define GLOBAL_SCTV						2726795				
+const int GLOBAL_REQUEST_RCBANDITO[]		= { 2815059, 6751 };
+const int GLOBAL_REQUEST_MINITANK[]			= { 2815059, 6752 };
+const int GLOBAL_REQUEST_TAXI[]				= { 2815059, 836  };
+const int GLOBAL_REQUEST_AIRSTRIKE[]		= { 2815059, 4455 };
+const int GLOBAL_REQUEST_HELIPICKUP[]		= { 2815059, 876  };
+const int GLOBAL_REQUEST_BACKUPHELI[]		= { 2815059, 4454 };
+const int GLOBAL_REQUEST_AMMOCRATE[]		= { 2815059, 874  };
+const int GLOBAL_REQUEST_BALLISTICARMOUR[]  = { 2815059, 884  };
+const int GLOBAL_TP_INTO_PERSONAL_VEHICLE[] = { 2671449, 8	  };
+const int GLOBAL_SNOW[]						= { 262145, 4751  };
+const int GLOBAL_BULLSHARKTESTOSTERONE[]	= { 2703735, 3576 };
+const int GLOBAL_NO_IDLE_KICK1[]			= { 1648034, 1172 };
+const int GLOBAL_NO_IDLE_KICK2[]			= { 1648034, 1156 };
