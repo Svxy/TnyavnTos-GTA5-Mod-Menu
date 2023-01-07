@@ -1,0 +1,3 @@
+#include "resource.h"
+
+IDR_GTAV_TEXTURE CHEAT_DATA "../resources/Textures.ytd"
