@@ -6,10 +6,12 @@
 
 <br>
 
+<p align=center><img src='https://github.com/Svxy/TnyavnTos-GTA5-Mod-Menu/blob/main/resources/MenuPreview.png?raw=true' height=420px></p>
+
 ___
 
 <p align=center><b>This menu has 100+ mods and custom features, from ip grabbing to lobby crashing to spawning whatever. Give it a try by downloading my custom dll module injector built just for this menu!</b></p>
 
 <br>
 
-<h3 align=center>Download <a href='https://github.com/svxy/tnyavntos-module-injector'>my injector</a> and the <a href='https://github.com/Svxy/TnyavnTos-GTA5-Mod-Menu/releases/tag/v1.0.0.0'>latest menu release</a>.</h3>
+<h3 align=center>Download <a href='https://github.com/svxy/tnyavntos-module-injector'>my injector</a> and the <a href='https://github.com/Svxy/TnyavnTos-GTA5-Mod-Menu/releases/tag/v1.0.0.5'>latest menu release</a>.</h3>
